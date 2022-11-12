@@ -339,6 +339,7 @@ main section.home .content ul li svg:hover {
 
 main section.home .content p {
     margin-bottom: 32px;
+    color: black;
 }
 
 /** MAIN: ABOUT **/
