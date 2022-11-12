@@ -159,7 +159,7 @@ p {
 }
 
 a {
-    color: #313131;
+    color: #efeeee;
     text-decoration: none;
 }
 
@@ -202,14 +202,14 @@ nav h1:hover {
 }
 
 nav p {
-    color: #1e1e1e;
+    color: #ffffff;
     font-style: italic;
     font-size: 14px;
 }
 
 nav a.author {
     font-style: italic;
-    color: #999999c4;
+    color: #ffffff;
     font-size: 12px;
 }
 
