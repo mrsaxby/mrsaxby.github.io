@@ -1,16 +1,9 @@
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
-    addTextToElement(formatLocation(), "location");
-
-    addTextToElement(calculateDate(), "date");
-
-
+    addTextToElement(formatLocationText(), "location");
+    addTextToElement(formatDateText(), "date");
 });
 
-
-const calculateDate = () => {
+const formatDateText = () => {
     let now = new Date();
 
     return ` 
@@ -20,9 +13,7 @@ const calculateDate = () => {
     `;
 };
 
-const formatDate = (date) => {
-    return date.toLocaleString('en-UK', { hour: 'numeric', minute: 'numeric', hour12: true }).toUpperCase();
-};
+const formatDate = (date) => date.toLocaleString('en-UK', { hour: 'numeric', minute: 'numeric', hour12: true }).toUpperCase();
 
 const calculateGMT = (date) => {
     switch(date.getTimezoneOffset()) {
@@ -45,20 +36,11 @@ const isAtOffice = () => {
       }
 };
 
-const formatLocation = () => {
-    if(isAtOffice()) {
-        return `In the office`;
-    }
-    else {
-        return `WFH`;
-    }
-};
+const formatLocationText = () => `Location: ${isAtOffice() ? "In the office" : "WFH"}`;
 
-
-
-function addTextToElement(text, divID) {
+const addTextToElement = (text, divID) => {
     let div = document.getElementById(divID);
     let content = document.createTextNode(text);
   
     div.appendChild(content);
-}
+};
