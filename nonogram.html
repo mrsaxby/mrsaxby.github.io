@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <title>Nonogram</title>
+    <meta name="description" content="Nonogram">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/nonogram.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="./index.html">Portfolio</a>
+        <span class="navbar-text">
+            Navbar text with an inline element
+        </span>
+        </div>
+    </div>
+    </nav>
+
+<div class="container disable-dbl-tap-zoom">
+    <div class="row">
+        <div class="col-md-6">
+            grid size:
+            <input type="number" id="nonogram-size" max="45" min="2">
+            Mystery Game:
+            <input type="checkbox" id="nonogram-checkbox">
+        </div>
+        <div class="col-md-6">
+            <div id="selected-on">
+            </div>
+            <div id="selected-off">
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="tile-grid-container">
+                <div id="col-hints"></div>
+                <div id="row-hints"></div>
+                <div id="tile-grid"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/nonogram.js?time=<?=time();?>"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
