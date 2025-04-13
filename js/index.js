@@ -1,42 +1,50 @@
 document.addEventListener("DOMContentLoaded", () => {
-    addTextToElement(formatLocationText(), "location");
-    addTextToElement(formatDateText(), "date");
+    
+  
+    setInterval(() => {
+      let containerBounds = document.getElementById("alien-container").getBoundingClientRect();
+      let alien0 = document.getElementById("alien0");
+      let alien0Bounds = alien0.getBoundingClientRect();
+
+      alien0.style.left = Math.floor(Math.random() * (containerBounds.width - alien0Bounds.width) ) + "px";
+      alien0.style.top = Math.floor(Math.random() * (containerBounds.height - alien0Bounds.height)) + "px";
+    }, 1000 + Math.random() * (800));
+
+    setInterval(() => {
+      let containerBounds = document.getElementById("alien-container").getBoundingClientRect();
+      let alien1 = document.getElementById("alien1");
+      let alien1Bounds = alien1.getBoundingClientRect();
+   
+      alien1.style.left = Math.floor(Math.random() * (containerBounds.width - alien1Bounds.width) ) + "px";
+      alien1.style.top = Math.floor(Math.random() * (containerBounds.height - alien1Bounds.height)) + "px";
+    }, 2000+ Math.random() * (800));
+
+    setInterval(() => {
+      let containerBounds = document.getElementById("alien-container").getBoundingClientRect();
+      let alien2 = document.getElementById("alien2");
+      let alien2Bounds = alien2.getBoundingClientRect();
+
+      alien2.style.left = Math.floor(Math.random() * (containerBounds.width - alien2Bounds.width) ) + "px";
+      alien2.style.top = Math.floor(Math.random() * (containerBounds.height - alien2Bounds.height)) + "px";
+      
+    }, 3000+ Math.random() * (800));
+    
+
 });
 
-const formatDateText = () => {
-    let now = new Date();
 
-    return ` 
-        ${Intl.DateTimeFormat().resolvedOptions().timeZone} 
-        ${formatDate(now)} 
-        ${calculateGMT(now)}
-    `;
-};
 
-const formatDate = (date) => date.toLocaleString('en-UK', { hour: 'numeric', minute: 'numeric', hour12: true }).toUpperCase();
+ 
 
-const calculateGMT = (date) => {
-    switch(date.getTimezoneOffset()) {
-        case 60:
-            return "GMT -1"
-        case -60:
-            return "GMT +1"
-        default:
-            return "GMT";
-        }
-};
+var move = function() {
 
-const isAtOffice = () => {
-    switch(new Date().getDay() + 3) {
-        case 5:
-        case 6:
-          return false
-        default:
-            return true;
-      }
-};
+    var figur_1 = document.getElementById('figur_1');
+  
+    figur_1.style.position = "absolute";
+    figur_1.style.top = "100px";
+  }
+  
 
-const formatLocationText = () => `Location: ${isAtOffice() ? "In the office" : "WFH"}`;
 
 const addTextToElement = (text, divID) => {
     let div = document.getElementById(divID);

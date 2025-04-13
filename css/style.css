@@ -12,11 +12,10 @@ a {
 /* NAV */
 nav {
     background-color: #181818;
-    padding: 1em !important;
     margin-bottom: 1em;
 }
     nav .navbar-brand, nav .navbar-text {
-        color: #939395;
+        color: white;
     }
 
 
